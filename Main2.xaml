@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1000,954</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1032,954</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="42">
@@ -124,7 +124,7 @@
         <av:Point x:Key="ShapeLocation">70,22.5</av:Point>
         <x:Double x:Key="StateContainerWidth">653.3333333333334</x:Double>
         <x:Double x:Key="StateContainerHeight">705</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">130,60 160,60 160,58.66666666666666 223,58.66666666666666</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">130,60.1 160,60.1 160,59.466666666666654 223,59.466666666666654</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
@@ -173,13 +173,27 @@
                 <TryCatch.Try>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke GetTransactionData workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Framework\GetTransactionData.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">[TransactionNumber]</InArgument>
-                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
-                      <OutArgument x:TypeArguments="ui:QueueItem" x:Key="out_TransactionItem">[TransactionItem]</OutArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionField2">[TransactionField2]</OutArgument>
-                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_TransactionData">[dt_TransactionData]</InOutArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionLoanNumber">[io_GetLoanNumber]</OutArgument>
-                      <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionBorrowerLastName">[io_GetBorrowerLastName]</OutArgument>
+                      <InArgument x:TypeArguments="x:Int32" x:Key="in_TransactionNumber">
+                        <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="TransactionNumber" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                        <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="Config" />
+                      </InArgument>
+                      <OutArgument x:TypeArguments="ui:QueueItem" x:Key="out_TransactionItem">
+                        <VisualBasicReference x:TypeArguments="ui:QueueItem" ExpressionText="TransactionItem" />
+                      </OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionField2">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="TransactionField2" />
+                      </OutArgument>
+                      <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_TransactionData">
+                        <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_TransactionData" />
+                      </InOutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionLoanNumber">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_GetLoanNumber" />
+                      </OutArgument>
+                      <OutArgument x:TypeArguments="x:String" x:Key="out_TransactionBorrowerLastName">
+                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="io_GetBorrowerLastName" />
+                      </OutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                 </TryCatch.Try>
@@ -241,7 +255,7 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <Transition.To>
-            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="584,1428" sap2010:WorkflowViewState.IdRef="State_3">
+            <State x:Name="__ReferenceID2" sap2010:Annotation.AnnotationText="Process a single transaction. &#xA;The result of the processing can be: 1) Success, 2) Business Exception, 3) System Exception. &#xA;In the case of a system exception, the transaction can be automatically retried." DisplayName="Process Transaction" sap:VirtualizedContainerService.HintSize="231,188" sap2010:WorkflowViewState.IdRef="State_3">
               <State.Entry>
                 <TryCatch DisplayName="Try to process transaction" sap:VirtualizedContainerService.HintSize="538,956" sap2010:WorkflowViewState.IdRef="TryCatch_9">
                   <sap:WorkflowViewStateService.ViewState>
@@ -329,7 +343,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="500,264" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                        <Sequence DisplayName="Handle Business Exception" sap:VirtualizedContainerService.HintSize="500,261" sap2010:WorkflowViewState.IdRef="Sequence_29">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -398,7 +412,7 @@
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="s:Exception" Name="Exception" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="500,553" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                        <Sequence DisplayName="Handle System Exception" sap:VirtualizedContainerService.HintSize="500,550" sap2010:WorkflowViewState.IdRef="Sequence_30">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -476,7 +490,7 @@
                   <Transition.To>
                     <State x:Name="__ReferenceID3" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization" sap:VirtualizedContainerService.HintSize="254,104" sap2010:WorkflowViewState.IdRef="State_2">
                       <State.Entry>
-                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="798,5713" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                        <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="1314,6427" sap2010:WorkflowViewState.IdRef="TryCatch_2">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -484,14 +498,14 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <TryCatch.Try>
-                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="760,5485" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                            <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="1276,6199" sap2010:WorkflowViewState.IdRef="Sequence_4">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="698,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="1214,61" sap2010:WorkflowViewState.IdRef="Assign_5">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                                 </Assign.To>
@@ -499,7 +513,7 @@
                                   <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="698,4038" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[Config is Nothing]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="1214,4752" sap2010:WorkflowViewState.IdRef="If_1">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -508,22 +522,22 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                                 <If.Then>
-                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="620,3728" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                  <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="1136,4442" sap2010:WorkflowViewState.IdRef="Sequence_17">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="558,92" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="558,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
+                                    <ui:LogMessage DisplayName="Log Message screen resolution" sap:VirtualizedContainerService.HintSize="1074,92" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Info" Message="[&quot;The primary screen resolution is: &quot;+Screen.PrimaryScreen.Bounds.Width.ToString+&quot; x &quot;+ Screen.PrimaryScreen.Bounds.Height.ToString]" />
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitAllSettings workflow" sap:VirtualizedContainerService.HintSize="1074,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Framework\InitAllSettings.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <InArgument x:TypeArguments="x:String" x:Key="in_ConfigFile">Data\Config.xlsx</InArgument>
                                         <InArgument x:TypeArguments="s:String[]" x:Key="in_ConfigSheets">[{"Settings", "Constants"}]</InArgument>
                                         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_Config">[Config]</OutArgument>
                                       </ui:InvokeWorkflowFile.Arguments>
                                     </ui:InvokeWorkflowFile>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="558,169" sap2010:WorkflowViewState.IdRef="If_10">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite queue name from in configuration file in case the argument in_OrchestratorQueueName is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueName)]" DisplayName="If in_OrchestratorQueueName is specified" sap:VirtualizedContainerService.HintSize="1074,169" sap2010:WorkflowViewState.IdRef="If_10">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -551,7 +565,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="558,169" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <If sap2010:Annotation.AnnotationText="Overwrite folder name from in configuration file in case the argument in_OrchestratorQueueFolder is specified.&#xA;This provides backward compatibility with &lt; 2018.3." Condition="[Not String.IsNullOrWhiteSpace(in_OrchestratorQueueFolder)]" DisplayName="If in_OrchestratorQueueFolder is specified" sap:VirtualizedContainerService.HintSize="1074,169" sap2010:WorkflowViewState.IdRef="If_12">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -579,7 +593,7 @@
                                         </Sequence>
                                       </If.Else>
                                     </If>
-                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="558,215" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
+                                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Kills all Windows processes representing applications used in this business process to assure that the execution starts in a clean state.&#xA;Since the applications are assumed to be already closed, CloseAllApplications is skipped and just KillAllProcess is invoked." DisplayName="Invoke KillAllProcesses workflow (first run)" sap:VirtualizedContainerService.HintSize="1074,215" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Framework\KillAllProcesses.xaml">
                                       <ui:InvokeWorkflowFile.Arguments>
                                         <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                       </ui:InvokeWorkflowFile.Arguments>
@@ -591,20 +605,20 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InvokeWorkflowFile>
-                                    <Sequence DisplayName="Log into Encompass" sap:VirtualizedContainerService.HintSize="558,2457" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                    <Sequence DisplayName="Log into Encompass" sap:VirtualizedContainerService.HintSize="1074,3171" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Encompass" sap:VirtualizedContainerService.HintSize="496,2346" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Version="V2" WindowResize="Maximize">
+                                      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser IE: Encompass" sap:VirtualizedContainerService.HintSize="1012,3060" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Version="V2" WindowResize="Maximize">
                                         <uix:NApplicationCard.Body>
                                           <ActivityAction x:TypeArguments="x:Object">
                                             <ActivityAction.Argument>
                                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                             </ActivityAction.Argument>
-                                            <Sequence DisplayName="Log into Encompass" sap:VirtualizedContainerService.HintSize="462,2055" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                                            <Sequence DisplayName="Log into Encompass" sap:VirtualizedContainerService.HintSize="978,2729" sap2010:WorkflowViewState.IdRef="Sequence_38">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="x:String" Name="Username" />
                                                 <Variable x:TypeArguments="ss:SecureString" Name="Password" />
@@ -615,7 +629,7 @@
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:GetRobotCredential AssetName="Encompass" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="400,168" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password]" Username="[Username]">
+                                              <ui:GetRobotCredential AssetName="Encompass" CacheStrategy="None" DisplayName="Get Credential" sap:VirtualizedContainerService.HintSize="916,168" sap2010:WorkflowViewState.IdRef="GetRobotCredential_2" Password="[Password]" Username="[Username]">
                                                 <ui:GetRobotCredential.TimeoutMS>
                                                   <InArgument x:TypeArguments="x:Int32" />
                                                 </ui:GetRobotCredential.TimeoutMS>
@@ -626,7 +640,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:GetRobotCredential>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,92" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Encompass Credentials retrieved, type Username: &quot; +Username]">
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="916,92" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Info" Message="[&quot;Encompass Credentials retrieved, type Username: &quot; +Username]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -634,7 +648,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:LogMessage>
-                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Username" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="400,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Text="[Username]" Version="V3">
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Username" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="916,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Text="[Username]" Version="V3">
                                                 <uix:NTypeInto.Target>
                                                   <uix:TargetAnchorable DesignTimeRectangle="496, 300, 415, 32" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'reportgen'" FullSelectorArgument="&lt;webctrl id='userId' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='userId' tag='INPUT' type='text' class='' aaname='User ID' /&gt;" Guid="e0e1af33-e79e-4155-87b6-a6efb32a1f7f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaMAAAAkCAYAAAAkV1UgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKTSURBVHhe7drfbaMwAMDhu5nycEvcCFkmm0Q3RxZhgL50glaK5ANs/phAStpGDun3SX4ItQO8+CdIf/3+8zc0AwBKESMAihMjAIoTIwCKEyMAihMjAIoTIwCKEyMAihMjAIoTIwCKEyMAihMjAIoTIwCKE6NvcQqH3S4cTukjADcRo28hRgBf8cAxqsJxvwv7YxWq4z7sppt9dQz7+lhzPI5DnYSxYf3pMJ63FI04/+q89pz7cKy6uYfwL13bMPLr6K69G813ttcz/fIP72e07nQYzUvHADbs4WPUbLZNUDJpMx7vwXHTb0KRDiytT2vz74xPNtmm3sVh7lh2nsb8k1GMYD63D+N48qr7Wb8WYGs28WSUWzqeNut+V16eFzf64cmjXbc/1ism2o1+FIT+ySh97s3EKIVrLhJrrzOfd/k5Wl4PsBXbi9FiEGptPLrIXNmks++4tpnHyPR/uyVG2bXksqisvp/Jup4YAdu3vRil11LLY0VksqeW+Vds0eQ7bohR+/Q197RVy6Ky+n4m63piBGzfcz0ZZT6K0Ypopch8OkZffTKaECPgWW3wN6NJIBYtb9KP9ZvR2vuZruuIEbB9G4xRLb3ayv8W5w97dfx8MW92bQxCttGnmGTzbolRrY3HZH48NjnXqvtJa6cnESPgCWwzRq0UkNFo5lZVN39YH5+EhnkX+3lriNfivCuv1MbnGF/z3Lnno/LR/YgR8LweOEZf9aibtHgATInR3cyfP76mm//HBoCfSozupnnFdvnqbenfvQF+sieOEQBbIUYAFCdGABQnRgAUJ0YAFNfH6O3tLZzP53QYAO6n6U3TnU4fo/f39/D6+hpeXl4MwzAM466j6c1sjACgFDECoLAQ/gNfplmxLFaZXgAAAABJRU5ErkJggg==" InformativeScreenshot="12106294375f63a72aaac66735a3ac50.png" ScopeSelectorArgument="&lt;html app='encompass.exe' title='Encompass' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                                     <uix:TargetAnchorable.Anchors>
@@ -651,7 +665,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </uix:NTypeInto>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,92" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;Type Password &quot;]">
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="916,92" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[&quot;Type Password &quot;]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -659,7 +673,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:LogMessage>
-                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="400,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" SecureText="[Password]" Version="V3">
+                                              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Password" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="916,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" SecureText="[Password]" Version="V3">
                                                 <uix:NTypeInto.Target>
                                                   <uix:TargetAnchorable DesignTimeRectangle="496, 352, 415, 32" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FriendlyName="'INPUT password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='em-txt-lg em-showPassword-txt' aaname='Password' /&gt;" Guid="dd3ed54d-a62f-4ad7-b248-6bc9ad3d6491" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAaMAAAAkCAYAAAAkV1UgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHhSURBVHhe7dw/axRBGMBh/SbWFnaiXQo70UKws7MX8hGsxEIUxEKCWlhYSexsLfxz6KkQJKiFyIEimsYziAlRRt4lt9yKKYTDdwaeB144dna2/THH3u3bf+REiQGALGIEQDoxAiCdGAGQTowASCdGAKQTIwDSiREA6cQIgHRiBEA6MQIgnRgBkE6MABr2abpVRu+/lvFk2n1ulRgBNGb6Y6dceTApS1fH5cD5h4OJa7EW97REjAAacn99oxy9/KyPz/Lq23Jv7XM35+6+6a/HPXFvK8QIoAHft3+Ws3fW+9jERIBma1s7v7rPcW3+ntgT67UTI4DKfdncLqdvrQ0iEyeisPL4Qzl44Uk5dHFUbo4+dtfmT0gxsTeeUTMxAqhYROTYteeDuMTECShOPBGi2bUIUpyQ/jwdxcQzag6SGAFUTIwAqEJE5Pj1l4O4/MvXdLG35hAFMQJoQJyCztx+NYhMnIBma3u9wBB7vMAAwEJFbA5fetrHZq9Xu+OeWaxaIEYAjfGjVwCq4u+AAGBBxAiAdGIEQDoxAiCdGAGQTowASCdGAKQTIwDS9TE6dSP+RuKFMcYY81/m5Mrr3RTNxWg82ewW/rbBGGOMWeREbx69+7abIl/TAVABMQIgWSm/AfQnb7AfBfyaAAAAAElFTkSuQmCC" InformativeScreenshot="f7458a4c601f68dd05f889c6f9a1c4d2.png" ScopeSelectorArgument="&lt;html app='encompass.exe' title='Encompass' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                                     <uix:TargetAnchorable.Anchors>
@@ -676,7 +690,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </uix:NTypeInto>
-                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="400,92" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Clicking Log In&quot;]">
+                                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="916,92" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;Clicking Log In&quot;]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -684,7 +698,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:LogMessage>
-                                              <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="400,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Version="V3">
+                                              <uix:NClick ClickType="Single" DisplayName="Click 'Log In'" sap:VirtualizedContainerService.HintSize="916,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Version="V3">
                                                 <uix:NClick.Target>
                                                   <uix:TargetAnchorable DesignTimeRectangle="534, 427, 349, 36" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl name='login' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl name='login' tag='BUTTON' type='submit' class='btn btn-lg btn-primary btn-block' aaname='Log In' check:text='Log In' /&gt;" Guid="aa04d444-a39f-4c0e-bb1d-55e310dafa54" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWEAAAAoCAYAAAAv30vHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIxSURBVHhe7do/SxtxHMdxV30YlW7Sp2IHcesTiH+ehlMRh4IPoJF0dAwKXZyFTO6CGYObgsiv+Z25y11yTQs987s0rw+8ELmck7z5Im4EMzNLNhE2M0u4IsLPL6/hy7efYef4Inw6+g5Aw2Jf906vst7mKyIcA/zxqBu2Dnpho/MDgIbFvm4fdsP+2fWkvKUIx0ILMMD72uz0st7mKyIcT+W6FwBoVuxtPhEGWDIRBkhIhAESEmGAhEQYICERBkhIhAESEmGAhESYVtgdPIXw+BB2a5415vwhDMNTuDyveQaJiDCtIMKsKxGmFUSYdSXCtMIfI9wfTX4740bh5HfP7kfhdvzltl96nqtE+CZcPoYwHH9++PbmeDM/F5ZAhGmFhRGeuWBP7se/pMVn7yrRzX5O6fuKmghPwzv5/v6u+g68MxGmFRZFeO5ZOabZFVy+YKtRrqi7hAc3xfMs7iLMkokwrbAownNxLMV0/j0RZrWIMK3gEmZdiTCtsCjC1Xg2+zdhESY1EaYV8njOrojpX/53xHDw4BJmpYgw/5l4GU+vZmg7EWa1Zdft9DJ+u6hnLmVoMRFm5WV/RijmCma1iDBAQiIMkJAIAyQkwgAJiTBAQiIMkJAIAyQkwgAJ1UZ45/gibB30al8AoBmbnV7W23xFhPdOr8L2YTf7QN2LAPyb2NcP485+/tqflLcU4eeX17B/dp0VOp7KADQr9jUGOPY2XxFhMzNb/kTYzCzZQvgFSQxNZhvG6NUAAAAASUVORK5CYII=" InformativeScreenshot="9c11248d8e9b42f9fb58f0e11efaefce.png" ScopeSelectorArgument="&lt;html app='encompass.exe' title='Encompass' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
                                                     <uix:TargetAnchorable.Anchors>
@@ -701,7 +715,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </uix:NClick>
-                                              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="400,90" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                              <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="916,90" sap2010:WorkflowViewState.IdRef="Delay_1">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -709,15 +723,15 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </Delay>
-                                              <Sequence DisplayName="Checking for Welcome Message and Closing Message" sap:VirtualizedContainerService.HintSize="400,299" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                              <Sequence DisplayName="Checking for Welcome Message and Closing Message" sap:VirtualizedContainerService.HintSize="916,1065" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;Closing Welcome Message&quot;]" />
-                                                <uix:NCheckState DisplayName="Check App State 'Welcome to'" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Timeout="[60s]" Version="V3">
+                                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="854,92" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Info" Message="[&quot;Closing Prompt&quot;]" />
+                                                <uix:NCheckState DisplayName="Check App State 'Welcome to'" sap:VirtualizedContainerService.HintSize="854,818" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Timeout="[60s]" Version="V3">
                                                   <uix:NCheckState.IfExists>
                                                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,601" sap2010:WorkflowViewState.IdRef="Sequence_39">
                                                       <sap:WorkflowViewStateService.ViewState>
@@ -769,63 +783,9 @@
                                                       </uix:TargetAnchorable.Anchors>
                                                     </uix:TargetAnchorable>
                                                   </uix:NCheckState.Target>
-                                                  <sap:WorkflowViewStateService.ViewState>
-                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    </scg:Dictionary>
-                                                  </sap:WorkflowViewStateService.ViewState>
                                                 </uix:NCheckState>
                                               </Sequence>
-                                              <uix:NCheckState DisplayName="Check App State 'FileCounterPlugin cannot'" sap:VirtualizedContainerService.HintSize="400,52" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Version="V3">
-                                                <uix:NCheckState.IfExists>
-                                                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,404" sap2010:WorkflowViewState.IdRef="Sequence_44">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_45" Level="Info" Message="[&quot;Error occured after logging into Encompass.  FileCounterPlugin cannot start. Please contact IT Support.&quot;]" />
-                                                    <uix:NClick ClickType="Single" DisplayName="Click OK" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_4" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="13f8f4a7-6e0c-4615-bcd1-c5b0b20a3c6e" Version="V3">
-                                                      <uix:NClick.Target>
-                                                        <uix:TargetAnchorable DesignTimeRectangle="310, 119, 75, 23" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'unchecked'" FullSelectorArgument="&lt;wnd ctrlid='2' title='OK' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='2' title='OK' check:text='unchecked' /&gt;" Guid="349a133b-d4d1-4ea3-934b-3278d1841241" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAE8AAAAbCAYAAAA9K9JnAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAD5SURBVGhD7dbBDcIwDIXh7JRtMgm3rJJVMgXnbpANTK3QNK5SQbEIRnqHX2Dq06dAcKUUQp8FPEXAUyTw3O2OXiS8xDBYRjLhJYbnwrIs6BDwFAFPEfAUAU+RbbwUyDnX8jF3zxMF5ynmOqew7oTUPf9+ZvFy9CtYoNQ+yxR9D9ThMfJkOM4oHkPtp6qVI/kGuuHxa488L5t4Aqmvnr6Q+H3F8yPkSf0h3obFeKPfwnnZxDtcBq3Tr+1vTp9RvPMLYz9lHRpfGD5SbrtzMovHVcALf1UmA5rGsx7wFAFPEfAUvY2HzhNeYhgsI5nw6gd0LeApAt7HFXoAb+ZrYvlHDM8AAAAASUVORK5CYII=" InformativeScreenshot="bd5cb7c5948109a8678e0c299845c658.png" ScopeSelectorArgument="&lt;wnd app='encompass.exe' cls='#32770' title='Error' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
-                                                          <uix:TargetAnchorable.Anchors>
-                                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                              <uix:Target DesignTimeRectangle="70, 64, 302, 15" ElementType="Text" FriendlyName="'FileCounterPlugin cannot'" FullSelectorArgument="&lt;wnd ctrlid='65535' title='FileCounterPlugin cannot start.  Please contact IT Support.' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='65535' title='FileCounterPlugin cannot start.  Please contact IT Support.' check:text='FileCounterPlugin cannot start.  Please contact IT Support.' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATIAAAATCAYAAAATQYHiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPoSURBVHhe7ZiLkaswDEVTFwVRD9WkmRTDImzjK1kSBpLssqMz897E1u9agMLmMQdBENycGGRBENyeGGRBENyeGGRBENyeGGRBENweGGTPeXw85gf8G6ZX3h+X/4vPMK/bezxHJdcnOKCJIc9bcpzNh2DP7sLRc1/p+9E4ivnUtfpNruj3YslG95/sG/ZOwJ7Xv9LT/v6IQbYX1Jl4bcq3HuT+w3JE3Kb5bL67c/Tcb+p7F//1Wl3R78WSDZ+/nTqvaR7+ZB/7+9MxyHBf+tA6T/GxtO01T4NXHGKaXNY6f57qt0Z9Wyy58K0P9jddKcc4DvNjmBaVmJ+gtXw4NB+5LrUnIy5/brRr1HxJN/Uyr1mcl3OvHtRgGsueru81LX1b7aVH0t/Xmvo+LA+M5rNHPtPmTmttkIEudj/qNfmZCloOieYDe40m7Xqg/14PCaw5KrEI+R4dZOhfkHG4zp/hXLVdno0ge9Hf5j9zr7h/WqbiWRSKzzmfY/GB4UVNWQeFDsVsouibdfPlufk6ayvdYG98Mo7Miq6cozaEx603dTPgZG6+xrOkh0KLo8+Wdg7l8x8ePLPXD7tef/8RrF3o9U96rL73wWP0a7V4qdcdkbrkmXpyJB95nfy+etfK6gXX19bsj/V9E2Wo82PJOFzT50/cg+fulQtvZKloM/jcQSZrWLmJKzZF166fdnNpMUdtnh9i7K83QdHYk/NdNiS/KbC7XPE/rLUXiil56Z91rdAHHkpVl3WmGs9ybGj65Z7U1Wtb6Oohoe0VyHZskCXIb6lrfrnh+ts2n4uDbM9fIm1evnfYkDN+XkyvzfNDlP3m26on57tsLelbWxsitDyjtRcrxquTMXUl3DOpaD5yD9cHbN09JLS9AtnODDIiDXj7y9/S9Gmbz4VBlg5cXwMr9dW/8Fz+Xk4r+7USG7hANrUuYWkiLF1eDgT3PU2ijqm3t66im3KW4qf7wdf+az3GaZBGo84prQSt8aHTsLThvnHdTV0FPJORg6H79PcV18JmatVqWj0hyPaOQYafF5gmylk18Wfes1GaM70iaK3fK9d+7F9/JCyvwbxA+qbTbJSj7It6a6Oybf1B06gr1tQYitmao+ryc1TEvqlpAeuYenvrEmQr+Ug1rnv74dkIyMn2F4vs4wbEbHe19EcfT6sWp9+clTZHQuyb193SVfahunNPV7RY2GNahUax7ush0db0r5d85jCXgJ255l/ZeSbXH+ZXe3tG3UbAWZQ49O29V2CQBVdo30KD4D/TDp2KZ/sMMcguwN86v3vhguB3iUEWBEHwVmKQBUFwe2KQBUFwe2KQBUFwc+b5B9T8yQWAlwazAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
-                                                            </scg:List>
-                                                          </uix:TargetAnchorable.Anchors>
-                                                        </uix:TargetAnchorable>
-                                                      </uix:NClick.Target>
-                                                    </uix:NClick>
-                                                  </Sequence>
-                                                </uix:NCheckState.IfExists>
-                                                <uix:NCheckState.IfNotExists>
-                                                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_45">
-                                                    <sap:WorkflowViewStateService.ViewState>
-                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                      </scg:Dictionary>
-                                                    </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[&quot;Plugin Error did not appear. Moving on.&quot;]" />
-                                                  </Sequence>
-                                                </uix:NCheckState.IfNotExists>
-                                                <uix:NCheckState.Target>
-                                                  <uix:TargetAnchorable DesignTimeRectangle="70, 64, 302, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'FileCounterPlugin cannot'" FullSelectorArgument="&lt;wnd ctrlid='65535' title='FileCounterPlugin cannot start.  Please contact IT Support.' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='65535' title='FileCounterPlugin cannot start.  Please contact IT Support.' check:text='FileCounterPlugin cannot start.  Please contact IT Support.' /&gt;" Guid="e7c0c162-033b-4c35-92cd-95f5f7eda380" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATIAAAATCAYAAAATQYHiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPoSURBVHhe7ZiLkaswDEVTFwVRD9WkmRTDImzjK1kSBpLssqMz897E1u9agMLmMQdBENycGGRBENyeGGRBENyeGGRBENyeGGRBENweGGTPeXw85gf8G6ZX3h+X/4vPMK/bezxHJdcnOKCJIc9bcpzNh2DP7sLRc1/p+9E4ivnUtfpNruj3YslG95/sG/ZOwJ7Xv9LT/v6IQbYX1Jl4bcq3HuT+w3JE3Kb5bL67c/Tcb+p7F//1Wl3R78WSDZ+/nTqvaR7+ZB/7+9MxyHBf+tA6T/GxtO01T4NXHGKaXNY6f57qt0Z9Wyy58K0P9jddKcc4DvNjmBaVmJ+gtXw4NB+5LrUnIy5/brRr1HxJN/Uyr1mcl3OvHtRgGsueru81LX1b7aVH0t/Xmvo+LA+M5rNHPtPmTmttkIEudj/qNfmZCloOieYDe40m7Xqg/14PCaw5KrEI+R4dZOhfkHG4zp/hXLVdno0ge9Hf5j9zr7h/WqbiWRSKzzmfY/GB4UVNWQeFDsVsouibdfPlufk6ayvdYG98Mo7Miq6cozaEx603dTPgZG6+xrOkh0KLo8+Wdg7l8x8ePLPXD7tef/8RrF3o9U96rL73wWP0a7V4qdcdkbrkmXpyJB95nfy+etfK6gXX19bsj/V9E2Wo82PJOFzT50/cg+fulQtvZKloM/jcQSZrWLmJKzZF166fdnNpMUdtnh9i7K83QdHYk/NdNiS/KbC7XPE/rLUXiil56Z91rdAHHkpVl3WmGs9ybGj65Z7U1Wtb6Oohoe0VyHZskCXIb6lrfrnh+ts2n4uDbM9fIm1evnfYkDN+XkyvzfNDlP3m26on57tsLelbWxsitDyjtRcrxquTMXUl3DOpaD5yD9cHbN09JLS9AtnODDIiDXj7y9/S9Gmbz4VBlg5cXwMr9dW/8Fz+Xk4r+7USG7hANrUuYWkiLF1eDgT3PU2ijqm3t66im3KW4qf7wdf+az3GaZBGo84prQSt8aHTsLThvnHdTV0FPJORg6H79PcV18JmatVqWj0hyPaOQYafF5gmylk18Wfes1GaM70iaK3fK9d+7F9/JCyvwbxA+qbTbJSj7It6a6Oybf1B06gr1tQYitmao+ryc1TEvqlpAeuYenvrEmQr+Ug1rnv74dkIyMn2F4vs4wbEbHe19EcfT6sWp9+clTZHQuyb193SVfahunNPV7RY2GNahUax7ush0db0r5d85jCXgJ255l/ZeSbXH+ZXe3tG3UbAWZQ49O29V2CQBVdo30KD4D/TDp2KZ/sMMcguwN86v3vhguB3iUEWBEHwVmKQBUFwe2KQBUFwe2KQBUFwc+b5B9T8yQWAlwazAAAAAElFTkSuQmCC" InformativeScreenshot="e73f42c6c130c4d3d34a5fad4c50e8ae.png" ScopeSelectorArgument="&lt;wnd app='encompass.exe' cls='#32770' title='Error' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                                                    <uix:TargetAnchorable.Anchors>
-                                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                        <uix:Target DesignTimeRectangle="13, 8, 39, 20" FriendlyName="'encompass.exe Error'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACcAAAAUCAYAAAAOTSQ2AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACaSURBVEhL7ZPbCcAgDEWdy4Eyj9O4jMOkwVc1WNRQUFoP+HFjaI81VbgxR04Kk7MISqEqFti4tYCGnEbjYlzMF+RCHUDTVQMlnglnUDfHoe6doTNz8cWxrrN1O2chL5oOyXvHmfpyd51lL5MOErCQZJ+e2ecHcj7zay1H4jW5cubSrPTkiOqH6PQOwuT24shJOXJSjpyUjeUQL3r/c71obe+NAAAAAElFTkSuQmCC" SearchSteps="Image" TargetType="ImageBased" />
-                                                      </scg:List>
-                                                    </uix:TargetAnchorable.Anchors>
-                                                  </uix:TargetAnchorable>
-                                                </uix:NCheckState.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </uix:NCheckState>
-                                              <Assign sap:VirtualizedContainerService.HintSize="400,62" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                              <Assign sap:VirtualizedContainerService.HintSize="916,62" sap2010:WorkflowViewState.IdRef="Assign_29">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:Boolean">[FirstRun]</OutArgument>
                                                 </Assign.To>
@@ -847,7 +807,7 @@
                                         </sap:WorkflowViewStateService.ViewState>
                                       </uix:NApplicationCard>
                                     </Sequence>
-                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="558,162" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
+                                    <ui:AddLogFields sap2010:Annotation.AnnotationText="Add the process name to the logs generated after this point. &#xA;This log field can be used to create reports and visualizations about the process." DisplayName="Add Log Fields (BusinessProcessName)" sap:VirtualizedContainerService.HintSize="1074,162" sap2010:WorkflowViewState.IdRef="AddLogFields_2">
                                       <ui:AddLogFields.Fields>
                                         <InArgument x:TypeArguments="x:String" x:Key="logF_BusinessProcessName">[Config("logF_BusinessProcessName").ToString]</InArgument>
                                       </ui:AddLogFields.Fields>
@@ -869,7 +829,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="698,451" sap2010:WorkflowViewState.IdRef="If_13">
+                              <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="1214,451" sap2010:WorkflowViewState.IdRef="If_13">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -890,7 +850,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <If Condition="[FirstRun=True]" sap:VirtualizedContainerService.HintSize="698,704" sap2010:WorkflowViewState.IdRef="If_15">
+                              <If Condition="[FirstRun=True]" sap:VirtualizedContainerService.HintSize="1214,704" sap2010:WorkflowViewState.IdRef="If_15">
                                 <If.Then>
                                   <Sequence sap:VirtualizedContainerService.HintSize="400,304" sap2010:WorkflowViewState.IdRef="Sequence_42">
                                     <sap:WorkflowViewStateService.ViewState>
@@ -927,7 +887,7 @@
                             </Sequence>
                           </TryCatch.Try>
                           <TryCatch.Catches>
-                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="764,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                            <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1280,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
