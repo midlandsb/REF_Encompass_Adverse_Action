@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1000,1167" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CloseAllApplications" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1011,639" sap2010:WorkflowViewState.IdRef="CloseAllApplications_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>Microsoft.VisualBasic</x:String>
@@ -31,10 +31,12 @@
       <x:String>UiPath.Platform.ObjectLibrary</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="42">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="84">
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
       <AssemblyReference>PresentationCore</AssemblyReference>
@@ -76,40 +78,73 @@
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
       <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="496,1102" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="Do the necessary procedures for ending the process (e.g., logout) and close the used applications." DisplayName="Close All Applications" sap:VirtualizedContainerService.HintSize="400,510" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Encompass - Build 23.2.0.2 - https://BE11138816.ea.elliemae.net/Encompass$BE1113881" sap:VirtualizedContainerService.HintSize="434,817" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="b3763a82-ff02-4ec2-909f-9e62395ff4c6" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Close Encompass ALT and F4" sap:VirtualizedContainerService.HintSize="400,526" sap2010:WorkflowViewState.IdRef="Sequence_3">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <uix:NClick ClickType="Single" DisplayName="Click 'Encompass'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3763a82-ff02-4ec2-909f-9e62395ff4c6" Version="V3">
-              <uix:NClick.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="9, 31, 79, 24" DesignTimeScaleFactor="1" FriendlyName="'Encompass'" FullSelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' automationid='' check:fulltext='Encompass' /&gt;" Guid="a202a5ca-3990-47e4-bac4-c48454123fce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAcCAYAAAAdvIO5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKRSURBVGhD7ZTbbtpAEIb9RJXNs9SY5kHKsW/RFgqmeYiqEEC096GI0EApCFBCUxDccz2dtdfjBZbYaBFS1F3pkzz/HHb8W2CwA/qc5Wgzz3jIzM1mo1GEzFyv1xpFyMzVaqVRhMxcLpcaRcjMv09PGkXIzD+LhUYRMnPx+KhRhMx8eHiIwTVcYTlrCbi6ltX9nzAvPTPn83kMPsMbIwHvvstyGjJzNpvFoOqb+U2W05CZ0+k0BlVIoZmF9hG9kKKff6LQFvJtKCTCv4ZUlevtAiS4tqMH86phnuXahQTVhvMPa8W7q6lwvpGqcl22z5EdTwD7sBPPZDKJgQsOv8zHAVfUHdevcx0h14K8ZYCVb/EZAX6P4/K4lQfLsCDfCnOGlYcWy3nzhBk78/dqd+aIsDqus/5g1wCZdiLMS8/M8Xgcg4q3UK4ZpQtxM4cv50Blp16uVxw0t8Ken5l3EO/nxDlIxf8QPuJO+HFyTeqRaidCZv4ejWJQ9hdvROlC3Mjikkko79TL9XISTSiz52fmHcT7uQbk8Jfgzdm5g+li3QgaWcsz2b/zuBYXMvPXcBiDEiQNE7L1KF2M65A18Ytn6jwn1hiQLPG4nsEXt+HTQX9U7M+h+eKckg2GmYEb0sUZPjcZ82A3mRYHMnM4GMSgCDaWs5YAM13jugmZmli3H4c9dpHrtTSYpEf1H4v9Z9s2D+cPapDBD+nppg22yXuKaDLda0OJ1cq0E8Fe7MYzuL9/oXz0zEx/leUuC5n5s9+PhJXKkNVejg/wGs18+0WWuyzoBbqBp39390J5j2a+QjNluctCZvZ6PY0iZGa329UoQmb+6HQ0ipCZndtbjSJkpuu6GkXIzO12q1FEm3k2tvAPrAStm1Csm5YAAAAASUVORK5CYII=" InformativeScreenshot="e53245b96a067a148920743447797b3e.png" ScopeSelectorArgument="&lt;wnd app='encompass.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
-              </uix:NClick.Target>
-            </uix:NClick>
-            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,214" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_1" Shortcuts="[d(hk)][d(alt)][k(f4)][u(alt)][u(hk)]" Version="V3" />
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1936, 828" FilePath="C:\SmartClientCache\Apps\Ellie Mae\Encompass\encompass.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARoSURBVFhHxVdNbFRVFB5xXULSuDAKbtg1IcYNXaiJiimiC6Io0ZUJiVaNkkYXaAywIbLQ2BbKtAVRkhJKwhRabbVKU+ogooRQpoFUbGda+wcFW6bDTOfNzzuc7859b957c/o61Ri/5JvM3DnnfOfde8+59wXKBRFVMncw25gRZoJpAd8xhv9gU6nd/j042AbmCWaGWS5gC58NOszKwc4VzCDTZLpgmibl8nnKMs18lggsNQMwiBgVOmx5YIcq5p9MG6Ozt6mx7xxtbzlKz37eaDP51UZabFyrmP66mjIDe8j82+UKYKBKh/cHG1Yz4/ACZhcStLez2yXqZOp4jZ1Akeso01NLZmJaR1FAzGotI4MN8OS2ePjGCL3U2CwKgzVfNpHR/ZaQQIHplirKj/bqaAqILc8E/4E1t+fu26tD9NwXB0Rhi3XtIcpebhbFbR54jHLX2nVUBWiU7gkexGZRwJMvJw6evHSZzLkRWdhJTiIf/VFHVwhq2QJ4AKWmtvHN+ILvtFvcXN9Ec8kkXMgIbZOFHcRymIkpZc+AVrFE+QdqVsFvwzkZPBfWHlyFE7+Iol5iYzpwwhJHh1NNZoRLTRLzEqWYNAy42Mj07hRFvTTvDGsPpVmJBNA6FRrO9ouCTr5Qf4iuT89oDweMBKWPbxJFncwM7NYOCjuQAPq3wmvN7ibjJcR/j41r61Kg7tNtz4jCFtNHN2prhTYkgENEtVdJ1OIbh7+h4ZmbMPWFuThPRteborhF7t/amiJIQJ1q6O2S8JaGIB0JX6DFzErOIo73x2lKH3tSTkCdHQoJJKCAg8USfbnpMH3S0UVdg0O0sJjWFv8ALJSP9VHmp7pCMtwPPAlQMQFegorOKD3SM0ZPDUzSh5E71D+borx4yJWPG7cStP+HYXrx4Hla/+n3tHrnGcrm7CVQCaglQAKB0EgJ1/eO07HxBfmw9cGlsTmqaQhT4O1TJcwWn0otgdqEGJMSsPj0wBRNpIpTtxQy/HQfnYrQA7Wlwhbz/LAaahPaZYjpl8QtPtwdo0jc3YCcSBo52lT/syhqcd3HPdpaQZWh3Yjeu3JbFHbyoe9iFL1XWhGY1ueXEQc/ODmoPRRUI7Jb8eBdQxT18om+CTI8u3PX6SFR0MuhKfu6UWjF+jywD6NXLs6Iol5+NjyvPYiuTt6lB98JiYJOvtp6UXsoFA4jgH/Yx/F4Mkuru6KiqJNr2CaRLZTT1uAFUdDJNXWd9NdcStkzoOW+MfOAfSHpmLpHqzpkYSdbY3GanE/57nhwVW2IzgzadwHAfSEBeNB1JTs0Gl82ic3np+lgP38XRC1CvDUc1VEV5CsZwH+4LqWYCb/lQOd8/chvojCIafc8+dKXUgts4LqWj/Ge8NuYj+87K4pva/nVueYAYvpfyy2wYcmLCUr0Xe4T3mb1KDcWS3Ttrm56v/2KqgoPEKu8FxML7LD0qxkzxx84P9CAcsxid3UBoyt/NXOCnf+fl1MvONh/8HoeCNwHFOaSiIEycFQAAAAASUVORK5CYII=" InformativeScreenshot="d746274585cfaa6bde3e0a7ac8db1bcb.png" Selector="&lt;wnd app='encompass.exe' ctrlname='MainForm' /&gt;" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
+    <ui:LogMessage DisplayName="Log message (close applications)" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Closing applications...&quot;]" />
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="338,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Encompass.exe" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="338,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="496,911" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Encompass - Build 23.2.0.2 - https://BE11138816.ea.elliemae.net/Encompass$BE1113881" sap:VirtualizedContainerService.HintSize="434,800" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="b3763a82-ff02-4ec2-909f-9e62395ff4c6" Version="V2">
+            <uix:NApplicationCard.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Close Encompass " sap:VirtualizedContainerService.HintSize="400,469" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NClick ClickType="Single" DisplayName="Click 'Encompass'" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3763a82-ff02-4ec2-909f-9e62395ff4c6" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="9, 31, 79, 24" DesignTimeScaleFactor="1" FriendlyName="'Encompass'" FullSelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' automationid='' check:fulltext='Encompass' /&gt;" Guid="a202a5ca-3990-47e4-bac4-c48454123fce" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAcCAYAAAAdvIO5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKRSURBVGhD7ZTbbtpAEIb9RJXNs9SY5kHKsW/RFgqmeYiqEEC096GI0EApCFBCUxDccz2dtdfjBZbYaBFS1F3pkzz/HHb8W2CwA/qc5Wgzz3jIzM1mo1GEzFyv1xpFyMzVaqVRhMxcLpcaRcjMv09PGkXIzD+LhUYRMnPx+KhRhMx8eHiIwTVcYTlrCbi6ltX9nzAvPTPn83kMPsMbIwHvvstyGjJzNpvFoOqb+U2W05CZ0+k0BlVIoZmF9hG9kKKff6LQFvJtKCTCv4ZUlevtAiS4tqMH86phnuXahQTVhvMPa8W7q6lwvpGqcl22z5EdTwD7sBPPZDKJgQsOv8zHAVfUHdevcx0h14K8ZYCVb/EZAX6P4/K4lQfLsCDfCnOGlYcWy3nzhBk78/dqd+aIsDqus/5g1wCZdiLMS8/M8Xgcg4q3UK4ZpQtxM4cv50Blp16uVxw0t8Ken5l3EO/nxDlIxf8QPuJO+HFyTeqRaidCZv4ejWJQ9hdvROlC3Mjikkko79TL9XISTSiz52fmHcT7uQbk8Jfgzdm5g+li3QgaWcsz2b/zuBYXMvPXcBiDEiQNE7L1KF2M65A18Ytn6jwn1hiQLPG4nsEXt+HTQX9U7M+h+eKckg2GmYEb0sUZPjcZ82A3mRYHMnM4GMSgCDaWs5YAM13jugmZmli3H4c9dpHrtTSYpEf1H4v9Z9s2D+cPapDBD+nppg22yXuKaDLda0OJ1cq0E8Fe7MYzuL9/oXz0zEx/leUuC5n5s9+PhJXKkNVejg/wGs18+0WWuyzoBbqBp39390J5j2a+QjNluctCZvZ6PY0iZGa329UoQmb+6HQ0ipCZndtbjSJkpuu6GkXIzO12q1FEm3k2tvAPrAStm1Csm5YAAAAASUVORK5CYII=" InformativeScreenshot="e53245b96a067a148920743447797b3e.png" ScopeSelectorArgument="&lt;wnd app='encompass.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NClick ClickType="Single" DisplayName="Click Exit" sap:VirtualizedContainerService.HintSize="338,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="b3763a82-ff02-4ec2-909f-9e62395ff4c6" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="9, 146, 204, 26" DesignTimeScaleFactor="1" FriendlyName="'Exit'" FullSelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' /&gt;&lt;ctrl name='Exit' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' /&gt;&lt;ctrl name='Exit' role='menu item' automationid='' check:fulltext='Exit' /&gt;" Guid="16da9bfe-61d8-425f-adfd-ee74be14ef9f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANAAAAAeCAYAAABdRpCwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIzSURBVHhe7dlJcqMwFMZxX4sDae1VOqt0eRs8cBouwy08z6Xw1BYWQwggV9tK/V31K8dYDtR7fEjYI3no/DGZTPTlctHn87lwOp0Kx+OxcDgcvrXf7/VutzO2262x2Wz0er02VquVXi6XxvV6BYIkefnzN9YECBiAAAEeCBDggQABHggQ4IEAAR4kL+8ECBiGGQjwwAwEeAgwQKlW+aHK4VoqbRp3kyU6GkU6yRrew0OkKu+DSivbpU9D617vcZRkpTFZEulRlOjM2fYMkpfAlnC+jSFMDyUXqEhpFVXr6ta6b91/Gi/v58EiQAQodDITyOxgn+/vubXuW/f28bIvlUhwCdCDApTpJHKm+VQ5Vyc7Xp6dZUFtyYH+pO63XpiZyD2hu9RdPq90Wry2mnp8I/uR/1Hb33NIXgK/B7INkO3yt312x9tmtDQG/ZVOYidM5nWXurcFyO2xvc9tC+xz/JIZ6EZmnqLYVpdGYojqss3c2BczTEvd5eR3wmHd+9bcp9L+XihAbwQI/Ukt6yEorwh+qnufJdw3+3tyiEyAPj7lWPKjCTpAsp0l3H9Tus+0JBD2Atal7n0CVPFKM1B4ASpfhaIkNY2z07tZShTFLTfD/GYhn+NLBC9Sx/K3bv/cl3E+dQ8tQEEt4YDXQYAADwQI8CB5GY/HBAgYQvKyWCwIEDCE5GU+nxMgYAgCBHiQvMxmMwIEDCF5mU6nBAgYojFATQMB1Ele4rjyOxCA7uI41l8c+KgRDZ/+CgAAAABJRU5ErkJggg==" InformativeScreenshot="0feb2a625e78d3cbb9dc6006156afd71.png" ScopeSelectorArgument="&lt;wnd app='encompass.exe' ctrlname='MainForm' /&gt;" SearchSteps="Selector, FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="9, 31, 79, 24" FriendlyName="'Encompass Loan'" FullSelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='mainMenu' /&gt;&lt;ctrl name='Encompass' role='menu item' automationid='' check:fulltext='Encompass&amp;#xD;&amp;#xA;Loan Mailbox...&amp;#xD;&amp;#xA;Calculator...&amp;#xD;&amp;#xA;Settings...&amp;#xD;&amp;#xA;Exit' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAcCAYAAAAdvIO5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJTSURBVGhD7ZlrbuIwFEZZVrMfL4QFTBYz6S7KIMoUwoAAUaYDgn+83/Lku44TO3WA1FRVW0c6Er72vXFO7ARBCQd3x00OJ/OGRyKzXC473sh0OiU0mcfj0VEQeJtMJoSTaQm8jcdjwsm0BN5GoxGhyTwcDo6CwNu/lxfCybQE3v4Oh4STaQm8DZ+fiYIy7zmLhiNFwu5N474P8DYYDAi4LCjT437L1Pc9gbd+v084mZbAW6/XIzSZ+/3+AoGQGebEfZZsf88Plf6Q+57yaAjieOhzL45pcVkvSPvRF/peMjat/3qseu6ApfVLLIjjpvnkzPEC8NbtdokoL8osJDM9YanEeKDG5WQDSJV9YpK63DRHFytvVFzP83mIPqqn1NDqZ8ZqdVQwLo4jPxEbY4pdAbx1Oh0CLm+3MpO40qaLkxeuYIhjFQm5Z+q9amf71DoR8Y0QqHPK3GBT7Argrd1uE19QptgJVEc7B+LquPSxkYjPiZ0D3v60WsT7yyy0zeWFn6uXbYs6SX21Dlblhe0Pedm5mWJ5wFvYbBJvkCm3jECc9JqLT3N0gTJ+KT+vLT4zlr6c0lWlvFQ8xplcmdrWV8RnY1cAb81Gg4hyo+xY5m63+4T8jGTe8R+hqe/9gbfG0xPhZFoCb7/rdcLJtATe6o+PxBeQ+bHAW61WI5xMS+CtWq0STqYl8ParUiE0mdvt1lEQeKs8PBCazNPp5CgIvEmczBuiycS/bepvdeo3ffU5YVruks1mw9frNbFarYjlcskXiwUxn8/5bDYjTBP6vJz4f7w53aaQVl4eAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                </Sequence>
+              </ActivityAction>
+            </uix:NApplicationCard.Body>
+            <uix:NApplicationCard.TargetApp>
+              <uix:TargetApp Area="-8, -8, 1936, 828" FilePath="C:\SmartClientCache\Apps\Ellie Mae\Encompass\encompass.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARoSURBVFhHxVdNbFRVFB5xXULSuDAKbtg1IcYNXaiJiimiC6Io0ZUJiVaNkkYXaAywIbLQ2BbKtAVRkhJKwhRabbVKU+ogooRQpoFUbGda+wcFW6bDTOfNzzuc7859b957c/o61Ri/5JvM3DnnfOfde8+59wXKBRFVMncw25gRZoJpAd8xhv9gU6nd/j042AbmCWaGWS5gC58NOszKwc4VzCDTZLpgmibl8nnKMs18lggsNQMwiBgVOmx5YIcq5p9MG6Ozt6mx7xxtbzlKz37eaDP51UZabFyrmP66mjIDe8j82+UKYKBKh/cHG1Yz4/ACZhcStLez2yXqZOp4jZ1Akeso01NLZmJaR1FAzGotI4MN8OS2ePjGCL3U2CwKgzVfNpHR/ZaQQIHplirKj/bqaAqILc8E/4E1t+fu26tD9NwXB0Rhi3XtIcpebhbFbR54jHLX2nVUBWiU7gkexGZRwJMvJw6evHSZzLkRWdhJTiIf/VFHVwhq2QJ4AKWmtvHN+ILvtFvcXN9Ec8kkXMgIbZOFHcRymIkpZc+AVrFE+QdqVsFvwzkZPBfWHlyFE7+Iol5iYzpwwhJHh1NNZoRLTRLzEqWYNAy42Mj07hRFvTTvDGsPpVmJBNA6FRrO9ouCTr5Qf4iuT89oDweMBKWPbxJFncwM7NYOCjuQAPq3wmvN7ibjJcR/j41r61Kg7tNtz4jCFtNHN2prhTYkgENEtVdJ1OIbh7+h4ZmbMPWFuThPRteborhF7t/amiJIQJ1q6O2S8JaGIB0JX6DFzErOIo73x2lKH3tSTkCdHQoJJKCAg8USfbnpMH3S0UVdg0O0sJjWFv8ALJSP9VHmp7pCMtwPPAlQMQFegorOKD3SM0ZPDUzSh5E71D+borx4yJWPG7cStP+HYXrx4Hla/+n3tHrnGcrm7CVQCaglQAKB0EgJ1/eO07HxBfmw9cGlsTmqaQhT4O1TJcwWn0otgdqEGJMSsPj0wBRNpIpTtxQy/HQfnYrQA7Wlwhbz/LAaahPaZYjpl8QtPtwdo0jc3YCcSBo52lT/syhqcd3HPdpaQZWh3Yjeu3JbFHbyoe9iFL1XWhGY1ueXEQc/ODmoPRRUI7Jb8eBdQxT18om+CTI8u3PX6SFR0MuhKfu6UWjF+jywD6NXLs6Iol5+NjyvPYiuTt6lB98JiYJOvtp6UXsoFA4jgH/Yx/F4Mkuru6KiqJNr2CaRLZTT1uAFUdDJNXWd9NdcStkzoOW+MfOAfSHpmLpHqzpkYSdbY3GanE/57nhwVW2IzgzadwHAfSEBeNB1JTs0Gl82ic3np+lgP38XRC1CvDUc1VEV5CsZwH+4LqWYCb/lQOd8/chvojCIafc8+dKXUgts4LqWj/Ge8NuYj+87K4pva/nVueYAYvpfyy2wYcmLCUr0Xe4T3mb1KDcWS3Ttrm56v/2KqgoPEKu8FxML7LD0qxkzxx84P9CAcsxid3UBoyt/NXOCnf+fl1MvONh/8HoeCNwHFOaSiIEycFQAAAAASUVORK5CYII=" InformativeScreenshot="d746274585cfaa6bde3e0a7ac8db1bcb.png" Selector="&lt;wnd app='encompass.exe' ctrlname='MainForm' /&gt;" />
+            </uix:NApplicationCard.TargetApp>
+          </uix:NApplicationCard>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

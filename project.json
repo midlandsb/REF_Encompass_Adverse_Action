@@ -3,6 +3,7 @@
   "description": "Automation for using a list from Digital Reporting to process list in Encompass for producing Adverse Action letters. ",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.16.1]",
     "UiPath.OCR.Activities": "[3.15.1]",
     "UiPath.System.Activities": "[22.10.4]",
@@ -13,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.5.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "2.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
