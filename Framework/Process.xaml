@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>390,391</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1047,633</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -103,8 +103,12 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Create_Adverse_Action_Letters.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Create_Adverse_Action_Letters.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_LoanNumber">[in_LoanNumber]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_BorrowerLastName">[in_BorrowerLastName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_LoanNumber">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_LoanNumber" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_BorrowerLastName">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_BorrowerLastName" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
