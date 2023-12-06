@@ -1,10 +1,12 @@
 {
   "name": "REF_Encompass_Adverse_Action_Letters",
+  "projectId": "ac70d20d-d912-4c7e-99f4-f81839ef62aa",
   "description": "Automation for using a list from Digital Reporting to process list in Encompass for producing Adverse Action letters. ",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Database.Activities": "[1.7.1]",
     "UiPath.Excel.Activities": "[2.16.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.3.3]",
     "UiPath.OCR.Activities": "[3.15.1]",
     "UiPath.PDF.Activities": "[3.14.1]",
     "UiPath.System.Activities": "[22.10.4]",
@@ -15,7 +17,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.5.0",
-  "projectVersion": "2.0.26",
+  "projectVersion": "2.0.32",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -23,6 +25,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -87,7 +90,8 @@
         "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
       }
     ],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

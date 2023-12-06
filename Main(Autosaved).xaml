@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1421,997</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>677,997</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main2_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="46">
@@ -126,6 +126,7 @@
       <AssemblyReference>System.IO.Packaging</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
       <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>GlobalVariablesT1PNoYwrqg</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <StateMachine InitialState="{x:Reference __ReferenceID6}" sap2010:Annotation.AnnotationText="REF_Encompass_Adverse_Action_Letters&#xA;&#xA;This process pulls data from the queue REF_Encompass_Adverse_Action_Letters.  This queue is filled via an api push from the Digital Reporting Team.  The accounts are used to search in Encompass.  Then 'Statement of Denial' letters aka Adverse Action Letters are then created for the accounts and those letters are saved as files to a shared location. &#xA;&#xA;Author: Ashley Johnson&#xA;Applications:  Encompass&#xA;" DisplayName="General Business Process" sap:VirtualizedContainerService.HintSize="687,932" sap2010:WorkflowViewState.IdRef="StateMachine_1">
@@ -1284,28 +1285,28 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <Transition.To>
-                            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="777,4740" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
+                            <State x:Name="__ReferenceID4" sap2010:Annotation.AnnotationText="End process and close all applications used." DisplayName="End Process" sap:VirtualizedContainerService.HintSize="144,120" sap2010:WorkflowViewState.IdRef="State_1" IsFinal="True">
                               <State.Entry>
-                                <Sequence sap:VirtualizedContainerService.HintSize="731,4595" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                <Sequence sap:VirtualizedContainerService.HintSize="794,4067" sap2010:WorkflowViewState.IdRef="Sequence_59">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <Sequence DisplayName="Combine individual PDF letters into Single PDF and push to Adverse Action InfoImage folder on U drive" sap:VirtualizedContainerService.HintSize="669,3793" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                  <Sequence DisplayName="Combine individual PDF letters into Single PDF and push to Adverse Action InfoImage folder on U drive" sap:VirtualizedContainerService.HintSize="732,3265" sap2010:WorkflowViewState.IdRef="Sequence_58">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
-                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Individual_Letters" sap:VirtualizedContainerService.HintSize="606,2982" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="eb3dcdb0-a224-4f0a-a460-fd173b842c25" Version="V2">
+                                    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Individual_Letters" sap:VirtualizedContainerService.HintSize="592,2573" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="eb3dcdb0-a224-4f0a-a460-fd173b842c25" Version="V2">
                                       <uix:NApplicationCard.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,2691" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="558,2282" sap2010:WorkflowViewState.IdRef="Sequence_63">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:String" Default="\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload" Name="FilePathAdverseActionLettersCombined" />
                                               <Variable x:TypeArguments="x:Int32" Name="NumberOfFiles" />
@@ -1315,8 +1316,8 @@
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="510,92" sap2010:WorkflowViewState.IdRef="LogMessage_57" Level="Info" Message="[&quot;Combine individual PDF letters into Single PDF and push to Adverse Action InfoImage folder on U drive&quot;]" />
-                                            <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="496,92" sap2010:WorkflowViewState.IdRef="LogMessage_57" Level="Info" Message="[&quot;Combine individual PDF letters into Single PDF and push to Adverse Action InfoImage folder on U drive&quot;]" />
+                                            <Assign sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Assign_33">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="s:String[]">[Files]</OutArgument>
                                               </Assign.To>
@@ -1324,7 +1325,7 @@
                                                 <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles(FilePathAdverseLettersIndividualLetters, "*.pdf")]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <Assign sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="Assign_35">
+                                            <Assign sap:VirtualizedContainerService.HintSize="496,62" sap2010:WorkflowViewState.IdRef="Assign_35">
                                               <Assign.To>
                                                 <OutArgument x:TypeArguments="x:Int32">[NumberOfFiles]</OutArgument>
                                               </Assign.To>
@@ -1332,17 +1333,17 @@
                                                 <InArgument x:TypeArguments="x:Int32">[Files.Length]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <If Condition="[NumberOfFiles &gt;1]" sap:VirtualizedContainerService.HintSize="510,2200" sap2010:WorkflowViewState.IdRef="If_17">
+                                            <If Condition="[NumberOfFiles &gt;1]" sap:VirtualizedContainerService.HintSize="496,1831" sap2010:WorkflowViewState.IdRef="If_17">
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="476,1450" sap2010:WorkflowViewState.IdRef="Sequence_69">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="418,1258" sap2010:WorkflowViewState.IdRef="Sequence_69">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <upap:JoinPDF DisplayName="Join PDF Files" FileList="[Files]" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="JoinPDF_1" OutputFileName="[&quot;\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload\Individual_Letters\Adverse_Action_Notices_Mortgage_&quot;+DateTime.Now.ToString(&quot;MMddyyyy&quot;) +&quot;.pdf&quot;]" />
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="Info" Message="[&quot;Deleting the individual letters now that they are joined/combined together in a single pdf.&quot;]" />
-                                                  <ui:ForEachFileX DisplayName="For Each File in Folder - Delete the individual letters" Folder="[FilePathAdverseLettersIndividualLetters]" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                                                  <upap:JoinPDF DisplayName="Join PDF Files" FileList="[Files]" sap:VirtualizedContainerService.HintSize="356,82" sap2010:WorkflowViewState.IdRef="JoinPDF_1" OutputFileName="[&quot;\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload\Individual_Letters\Adverse_Action_Notices_Mortgage_&quot;+DateTime.Now.ToString(&quot;MMddyyyy&quot;) +&quot;.pdf&quot;]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="356,92" sap2010:WorkflowViewState.IdRef="LogMessage_63" Level="Info" Message="[&quot;Deleting the individual letters now that they are joined/combined together in a single pdf.&quot;]" />
+                                                  <ui:ForEachFileX DisplayName="For Each File in Folder - Delete the individual letters" Folder="[FilePathAdverseLettersIndividualLetters]" sap:VirtualizedContainerService.HintSize="356,81" sap2010:WorkflowViewState.IdRef="ForEachFileX_1" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                                                     <ui:ForEachFileX.Body>
                                                       <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                                         <ActivityAction.Argument1>
@@ -1351,13 +1352,13 @@
                                                         <ActivityAction.Argument2>
                                                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                         </ActivityAction.Argument2>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,263" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540,815" sap2010:WorkflowViewState.IdRef="Sequence_60">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <If Condition="[CurrentFile.ToString.Contains(&quot;Adverse&quot;)]" sap:VirtualizedContainerService.HintSize="388,182" sap2010:WorkflowViewState.IdRef="If_16">
+                                                          <If Condition="[CurrentFile.ToString.Contains(&quot;Adverse&quot;)]" sap:VirtualizedContainerService.HintSize="478,702" sap2010:WorkflowViewState.IdRef="If_16">
                                                             <If.Then>
                                                               <Sequence sap:VirtualizedContainerService.HintSize="400,203" sap2010:WorkflowViewState.IdRef="Sequence_61">
                                                                 <sap:WorkflowViewStateService.ViewState>
@@ -1390,7 +1391,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:ForEachFileX>
-                                                  <ui:ForEachFileX DisplayName="For Each File in Folder - Delete the individual letters" Folder="[FilePathAdverseToBeWorked]" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
+                                                  <ui:ForEachFileX DisplayName="For Each File in Folder - Delete the individual letters" Folder="[FilePathAdverseToBeWorked]" sap:VirtualizedContainerService.HintSize="434,441" sap2010:WorkflowViewState.IdRef="ForEachFileX_2" IncludeSubDirectories="False" OrderBy="NameAscFirst" SkipFolderWithoutPermission="False">
                                                     <ui:ForEachFileX.Body>
                                                       <ActivityAction x:TypeArguments="si:FileInfo, x:Int32">
                                                         <ActivityAction.Argument1>
@@ -1399,13 +1400,13 @@
                                                         <ActivityAction.Argument2>
                                                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                         </ActivityAction.Argument2>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,191" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,191" sap2010:WorkflowViewState.IdRef="Sequence_74">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="388,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_5" Path="[CurrentFile.ToString]" />
+                                                          <ui:DeleteFileX DisplayName="Delete File" sap:VirtualizedContainerService.HintSize="338,80" sap2010:WorkflowViewState.IdRef="DeleteFileX_5" Path="[CurrentFile.ToString]" />
                                                         </Sequence>
                                                       </ActivityAction>
                                                     </ui:ForEachFileX.Body>
@@ -1416,8 +1417,8 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:ForEachFileX>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;Assiging the variable of CombinedAdverseActionLetters to the newly created single pdf that is all the individual letter pdf's.&quot;]" />
-                                                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="356,92" sap2010:WorkflowViewState.IdRef="LogMessage_60" Level="Info" Message="[&quot;Assiging the variable of CombinedAdverseActionLetters to the newly created single pdf that is all the individual letter pdf's.&quot;]" />
+                                                  <Assign sap:VirtualizedContainerService.HintSize="356,61" sap2010:WorkflowViewState.IdRef="Assign_34">
                                                     <Assign.To>
                                                       <OutArgument x:TypeArguments="x:String">[CombinedAdverseActionLetters]</OutArgument>
                                                     </Assign.To>
@@ -1425,22 +1426,20 @@
                                                       <InArgument x:TypeArguments="x:String">["\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload\Individual_Letters\Adverse_Action_Notices_Mortgage_"+DateTime.Now.ToString("MMddyyyy") +".pdf"]</InArgument>
                                                     </Assign.Value>
                                                   </Assign>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;Copying the single pdf of all letters to the file path of the infoimage pick up that also holds the Credit Score Disclosures.&quot;]" />
-                                                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FilePathAdverseActionLettersCombined]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[CombinedAdverseActionLetters]" />
-                                                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FilePathARCHIVE]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_3" Path="[CombinedAdverseActionLetters]" />
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Copy completed.&quot;]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="356,92" sap2010:WorkflowViewState.IdRef="LogMessage_61" Level="Info" Message="[&quot;Copying the single pdf of all letters to the file path of the infoimage pick up that also holds the Credit Score Disclosures.&quot;]" />
+                                                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FilePathAdverseActionLettersCombined]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="356,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[CombinedAdverseActionLetters]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="356,92" sap2010:WorkflowViewState.IdRef="LogMessage_62" Level="Info" Message="[&quot;Copy completed.&quot;]" />
                                                 </Sequence>
                                               </If.Then>
                                               <If.Else>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="376,568" sap2010:WorkflowViewState.IdRef="Sequence_70">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="400,397" sap2010:WorkflowViewState.IdRef="Sequence_70">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Info" Message="[&quot;Only one file found.  Copy to Main folder and rename.&quot;]" />
-                                                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FilePathAdverseActionLettersCombined]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="[FilePathAdverseLettersIndividualLetters]" />
-                                                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FilePathARCHIVE]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="CopyFile_4" Path="[FilePathAdverseLettersIndividualLetters]" />
+                                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_68" Level="Info" Message="[&quot;Only one file found.  Copy to Main folder and rename.&quot;]" />
+                                                  <ui:CopyFile ContinueOnError="{x:Null}" Destination="[FilePathAdverseActionLettersCombined]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="338,154" sap2010:WorkflowViewState.IdRef="CopyFile_2" Path="[FilePathAdverseLettersIndividualLetters]" />
                                                 </Sequence>
                                               </If.Else>
                                             </If>
@@ -1638,16 +1637,7 @@
       <Variable x:TypeArguments="s:String[]" Name="Files" />
       <Variable x:TypeArguments="x:String" Default="\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload\Individual_Letters" Name="FilePathAdverseLettersIndividualLetters" />
       <Variable x:TypeArguments="x:String" Name="CombinedAdverseActionLetters" />
-      <Variable x:TypeArguments="x:String" Name="FilePathAdverseToBeWorked">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload\Individual_Letters\ToBeWorked</Literal>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="FilePathARCHIVE">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">U:\Informatica_Processing\Production\Archive\Temp Processing\InfoImage\Adverse Actions</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="\\msb-fs\universal\Informatica_Processing\Production\Temp_Processing\InfoImage_Upload\Individual_Letters\ToBeWorked" Name="FilePathAdverseToBeWorked" />
     </StateMachine.Variables>
   </StateMachine>
 </Activity>
